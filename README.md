@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Happy Birthday, isra!</title>
     <style>
         * {
@@ -48,12 +48,16 @@
             background: #ff6b6b;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 15px 25px;
             border-radius: 50px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
             transition: all 0.3s;
             box-shadow: 0 4px 10px rgba(255,107,107,0.4);
+            display: block;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 300px;
         }
         
         .heart-btn:hover {
@@ -74,22 +78,30 @@
         }
         
         h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         
+        h2 {
+            font-size: 1.8rem;
+        }
+        
+        p {
+            font-size: 1rem;
+        }
+        
         .container {
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px 15px;
         }
         
         .photo-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
         }
         
         .photo-card {
@@ -125,10 +137,10 @@
         
         .countdown-box {
             background: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             text-align: center;
-            min-width: 80px;
+            min-width: 60px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         
@@ -160,16 +172,45 @@
         }
         
         @media (max-width: 768px) {
+            header {
+                padding: 30px 15px;
+            }
+            
             h1 {
                 font-size: 2rem;
             }
             
+            h2 {
+                font-size: 1.5rem;
+            }
+            
             .countdown {
                 flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .love-notes {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .photo-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .photo-gallery {
+                grid-template-columns: 1fr;
             }
             
             .countdown-box {
-                min-width: 60px;
+                padding: 10px;
+                min-width: 50px;
+            }
+            
+            .countdown-value {
+                font-size: 1.5rem;
             }
         }
         
@@ -403,3 +444,4 @@
     </script>
 </body>
 </html>
+
